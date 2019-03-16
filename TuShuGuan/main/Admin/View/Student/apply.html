@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/jquery-easyui-1.6.7/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/jquery-easyui-1.6.7/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/bootstrap-3.3.7-dist/css/bootstrap.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/jquery-easyui-1.6.7/jquery.easyui.min.js"></script>
+	<style>
+		body{
+			width:100%;
+			height:100%;
+			overflow:hidden;
+		}
+		.app{
+			width:100%;
+			height:100%;
+		}
+		input{
+			margin-bottom: 20px;
+		}
+		select{
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="app">
+		<div class="container">
+			<div class="row">
+				<h4 class="text-right text-primary">申请借阅证</h4>
+				<form action="{:U('admin/student/apply')}" method="post">
+					<label for="student_id">输入借阅证号(学号)</label>
+					<input type="search" name="student_id" id="student_id" value="" class="form-control" placeholder="输入学号"/>
+					<label for="student_name">姓名</label>
+					<input type="search" name="student_name" id="student_name" value="" class="form-control" placeholder="输入姓名"/>
+					<label for="sex">性别</label>
+					<select name="sex" class="form-control" placeholder="选择性别">
+						<option value="男">男</option>
+						<option value="女">女</option>
+					</select>
+					<label for="sdept">系别</label>
+					<select name="sdept" class="form-control" placeholder="选择系别">
+						<option value="工程系">工程系</option>
+						<option value="法商系">法商系</option>
+						<option value="美术系">美术系</option>
+						<option value="体教">体教</option>
+						<option value="外语系">外语系</option>
+						<option value="财管">财管</option>
+						<option value="日语">日语</option>
+						<option value="陶艺">陶艺</option>
+					</select>
+					<label for="student_class">班级</label>
+					<input type="search" name="student_class" id="student_class" value="" class="form-control" placeholder="输入班级"/>
+					<button type="submit" class="btn btn-info">提交</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

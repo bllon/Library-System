@@ -1,0 +1,34 @@
+html,body{
+	width:100%;
+	height:100%;
+	background:#584c4c;
+}
+.container{
+	height:100%;
+}
+.row{
+	height:100%;
+}
+.title{
+	border-radius:20px;
+	padding:10px 0;
+}
+.loginBox{
+	height:auto;
+	background:rgba(0,0,0,0.3);
+	top:calc(50% - 150px);
+	padding:10px;
+	border-radius:20px;
+}
+.loginBox input{
+	margin-bottom:20px;
+	border-radius:20px;
+}
+.loginBox button{
+	margin-bottom:10px;
+	border-radius:20px;
+}
+.loginBox span{
+	color:#fff;
+	margin-bottom:10px;
+}

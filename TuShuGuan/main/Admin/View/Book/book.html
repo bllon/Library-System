@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/jquery-easyui-1.6.7/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/jquery-easyui-1.6.7/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Admin/bootstrap-3.3.7-dist/css/bootstrap.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/Admin/jquery-easyui-1.6.7/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<div class="app">
+		<div class="container">
+			<div class="row">
+				<table class="table table-bordered table-hover" border="" cellspacing="" cellpadding="">
+					<caption>书刊信息</caption>
+					<tr>
+						<th>ID</th>
+						<th>书名</th>
+						<th>作者</th>
+						<th>数量</th>
+						<th>借出</th>
+						<th>上架时间</th>
+						<th>操作</th>
+					</tr>
+					<foreach name="booklist" item="book">
+						<tr>
+							<td class="text-info">{$book.book_id}</td>
+							<td contenteditable="true">{$book.book_name}</td>
+							<td contenteditable="true">{$book.book_writer}</td>
+							<td contenteditable="true">{$book.num}</td>
+							<td class="text-danger" contenteditable="false">{$book.borrow_num}</td>
+							<td contenteditable="true">{$book.addtime}</td>
+							<td><a href="{:U('admin/book/delBook',array('book_id'=>$book['book_id']))}">删除</a></td>
+						</tr>
+					</foreach>
+				</table>
+				<nav aria-label="Page navigation">
+				  <ul class="pagination pull-right">
+				    <li>
+				      <a href="{:U('admin/book/book',array('to'=>'prev','page'=>$current))}" aria-label="Previous">
+				        <span aria-hidden="true">&laquo;</span>
+				      </a>
+				    </li>
+			    	<foreach name="nav" item="page" key="k">
+			    		<if condition="$k== $current">
+			    			<li class="active"><a href="{:U('admin/book/book',array('page'=>$k))}">{$k}</a></li>
+						<else />
+							<li><a href="{:U('admin/book/book',array('page'=>$k))}">{$k}</a></li>
+						</if>
+			    		
+			    	</foreach>
+				    <li>
+				      <a href="{:U('admin/book/book',array('to'=>'next','page'=>$current))}" aria-label="Next">
+				        <span aria-hidden="true">&raquo;</span>
+				      </a>
+				    </li>
+				  </ul>
+				</nav>
+				<small class="text-danger">备注：（点击表格可进行编辑修改）</small>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script src="__PUBLIC__/Admin/js/book.js"></script>
+</html>

@@ -1,0 +1,17 @@
+[ 2019-01-02T22:09:04+08:00 ] ::1 /TuShuGuan/test/index.php?__hbt=1546438142550
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000100s ]
+INFO: [ app_init ] --END-- [ RunTime:0.053134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030842s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010143s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010362s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020381s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020689s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.025578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.025917s ]
+

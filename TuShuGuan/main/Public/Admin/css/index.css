@@ -1,0 +1,58 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+.app{
+	width:100%;
+	height:auto;
+	background:rgba(0,0,0,0.3);
+}
+.container{
+	margin:0 auto;
+	padding:0;
+	background:#fff;
+}
+.row{
+	margin:0;
+}
+.user{
+	height:40px;
+	line-height:40px;
+	float:right;
+}
+.menu{
+	margin-top:20px;
+	padding:0;
+}
+.easyui-panel ul li{
+	list-style:none;
+	padding:2px 0;
+}
+.content{
+	margin-top:20px;
+	width:auto;
+	padding:2px;
+	height:630px;
+	margin-bottom:100px;
+	/*background:rgba(0,0,0,0.3);*/
+	position:relative;
+}
+#frame{
+	border:none;
+}
+.panel-body{
+	background:#f0f0f0;
+}
+.panel-header{
+	background:#fff url('../images/panel_header_bg.gif') no-repeat top right;
+}
+.panel-tool-collapse{
+	background:url('../images/arrow_up.gif') no-repeat 0px -3px;
+}
+.panel-tool-expand{
+	background:url('../images/arrow_down.gif') no-repeat 0px -3px;
+}

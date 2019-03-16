@@ -1,0 +1,12 @@
+[ 2018-10-30T19:55:50+08:00 ] ::1 /TuShuGuan/test/index.php/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+ERR: 无法加载模块:Index
+
+[ 2018-10-30T19:55:55+08:00 ] ::1 /TuShuGuan/test/index.php/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+ERR: 无法加载模块:Index
+

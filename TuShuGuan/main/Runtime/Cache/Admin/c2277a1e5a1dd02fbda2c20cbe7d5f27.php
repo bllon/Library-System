@@ -1,0 +1,53 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="/TuShuGuan/test/Public/Admin/jquery-easyui-1.6.7/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="/TuShuGuan/test/Public/Admin/jquery-easyui-1.6.7/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="/TuShuGuan/test/Public/Admin/bootstrap-3.3.7-dist/css/bootstrap.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="/TuShuGuan/test/Public/Admin/jquery-easyui-1.6.7/jquery.easyui.min.js"></script>
+	<style type="text/css">
+		input{
+			margin-bottom:20px;
+		}
+		a{
+			margin-top:30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="app">
+		<div class="container">
+			<div class="row">
+				<h4 class="text-right text-primary">修改密码</h4>
+				<form action="<?php echo U('admin/user/update');?>" method="post">
+					<label for="curPassword">当前密码:</label>
+					<input type="text" name="curPassword" id="curPassword" value="" class="form-control" placeholder="输入当前密码"/>
+					<label for="newPassword">新密码:</label>
+					<input type="text" name="newPassword" id="newPassword" value="" class="form-control" placeholder="输入新密码"/>
+					<label for="phone">手机号:</label>
+					<input type="tel" name="phone" id="phone" value="" class="form-control" placeholder="输入手机号"/>
+					<label for="yzm">验证码:</label>
+					<p>
+						<input type="text" name="yzm" id="" value="" />
+						<img id='yzm' src="<?php echo U('admin/user/yzm');?>" onclick="refresh();"/>
+					</p>
+					<button type="submit" class="btn btn-danger">确认修改</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script>
+	function refresh(){
+		document.getElementById('yzm').src="<?php echo U('admin/user/yzm');?>";
+	}
+	refresh();
+	
+</script>
+</html>
